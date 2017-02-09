@@ -1,0 +1,20 @@
+{
+  "name": "03",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack -w --config webpack.config.js"
+  },
+  "devDependencies": {
+    "browser-sync-webpack-plugin": "^1.1.4",
+    "css-loader": "^0.26.1",
+    "ejs": "^2.5.5",
+    "ejs-render-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.28.0",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1"
+  }
+}
