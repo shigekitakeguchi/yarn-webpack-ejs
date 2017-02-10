@@ -17,15 +17,7 @@ module.exports = [{
     new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
       filename: '../index.html',
-      template:  'ejs-render-loader!./src/template.ejs'
-    }),
-    new HtmlWebpackPlugin({
-      filename: '../about.html',
-      template:  'ejs-render-loader!./src/template.ejs'
-    }),
-    new HtmlWebpackPlugin({
-      filename: '../products.html',
-      template:  'ejs-render-loader!./src/template.ejs'
+      template:  'ejs-render-loader!./src/index.ejs'
     })
   ]
 },{
@@ -49,8 +41,12 @@ module.exports = [{
     new BrowserSyncPlugin(
                   {
                     host: 'localhost',
-                    port: 8081,
-                    server: { baseDir: ['public'] }
+                    port: 8080,
+                    server: { baseDir: ['app'] },
+                    files: [
+                      'app/scripts/*.js',
+                      'app/styles/*.css'
+                    ]
                   }
                 )
   ]
